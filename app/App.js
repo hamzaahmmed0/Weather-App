@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, ActivityIndicator, StyleSheet, TouchableOpacity } from 'react-native';
 
-const API_KEY = '4f3bd1885f3682336cacb8430b905986';
+const API_KEY = '*Sorry cant reveal my api :)*';
 const CITY = 'Lahore';
 
 export default function App() {
