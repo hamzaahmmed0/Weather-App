@@ -24,7 +24,6 @@ A simple React Native weather application built with Expo that fetches real-time
 
 * Node.js installed
 * Expo Go app (download from App Store or Google Play)
-* OpenWeather API key (free account at [openweathermap.org](https://openweathermap.org))
 
 ### Installation
 
@@ -115,4 +114,4 @@ This project taught me:
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and its interface can be viewed in Weather App UI
