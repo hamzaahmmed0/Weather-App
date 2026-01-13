@@ -1,50 +1,118 @@
-# Welcome to your Expo app 👋
+# Weather App 🌤️
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple React Native weather application built with Expo that fetches real-time weather data from the OpenWeather API.
 
-## Get started
+## Features
 
-1. Install dependencies
+* Displays current weather for any city
+* Shows temperature in Celsius
+* Displays weather description (sunny, rainy, foggy, etc.)
+* Loading indicator while fetching data
+* Error handling for API failures
+* Clean and professional UI
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+* **React Native** - Cross-platform mobile framework
+* **Expo** - Development platform for React Native
+* **OpenWeather API** - Real-time weather data
+* **React Hooks** - State management (useState, useEffect)
 
-   ```bash
-   npx expo start
-   ```
+## Getting Started
 
-In the output, you'll find options to open the app in a
+### Prerequisites
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* Node.js installed
+* Expo Go app (download from App Store or Google Play)
+* OpenWeather API key (free account at [openweathermap.org](https://openweathermap.org))
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Installation
 
-## Get a fresh project
-
-When you're ready, run:
-
+1. **Clone this repository**
 ```bash
-npm run reset-project
+git clone https://github.com/YOUR-USERNAME/weather-app.git
+cd weather-app
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. **Install dependencies**
+```bash
+npm install
+```
 
-## Learn more
+3. **Get your API Key**
+   * Go to [openweathermap.org](https://openweathermap.org)
+   * Sign up for a free account
+   * Go to "My API Keys" and copy your key
+   * Wait 10-15 minutes for it to activate
 
-To learn more about developing your project with Expo, look at the following resources:
+4. **Add your API key**
+   * Open `App.js`
+   * Replace `'REPLACE_ME'` with your actual API key
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+5. **Start the app**
+```bash
+npx expo start
+```
 
-## Join the community
+6. **Run on your device**
+   * **iPhone:** Open Camera app, scan the QR code, tap the notification
+   * **Android:** Open Expo Go app, tap the QR icon, scan the QR code
 
-Join our community of developers creating universal apps.
+## Project Structure
+```
+weather-app/
+├── app/
+│   ├── App.js          # Main weather app component
+│   └── index.js        # Entry point
+├── assets/             # Images and icons
+├── app.json            # Expo configuration
+├── package.json        # Dependencies
+└── .gitignore          # Git ignore file
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## How It Works
+
+1. App launches and immediately fetches weather data for Lahore
+2. While loading, displays a loading spinner
+3. Once data arrives, displays:
+   * City name (large bold text)
+   * Current temperature (very large text)
+   * Weather description
+4. If an error occurs, displays error message
+
+## Customization
+
+Want to change the city? Open `app/App.js` and modify:
+```javascript
+const CITY = 'Lahore'; // Change this to any city name
+```
+
+## What I Learned
+
+This project taught me:
+
+* Fetching data from external APIs using `fetch()`
+* Handling asynchronous operations with async/await
+* React Hooks (useState, useEffect)
+* Error handling with try/catch
+* React Native styling with Flexbox
+* Managing loading and error states in UI
+
+## Future Improvements
+
+- [ ] Add search functionality to change cities
+- [ ] Display more weather details (humidity, wind speed, etc.)
+- [ ] Add weather icons based on conditions
+- [ ] Save favorite cities
+- [ ] Add temperature unit toggle (Celsius/Fahrenheit)
+
+## Resources
+
+* [React Native Docs](https://reactnative.dev/)
+* [Expo Docs](https://docs.expo.dev/)
+* [OpenWeather API Docs](https://openweathermap.org/api)
+
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
